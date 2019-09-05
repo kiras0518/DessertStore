@@ -1,0 +1,20 @@
+PODS:
+  - PKCHelper (0.1.1):
+    - SwiftyBeaver (~> 1.7.0)
+  - SwiftyBeaver (1.7.0)
+
+DEPENDENCIES:
+  - PKCHelper (~> 0.1.1)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - PKCHelper
+    - SwiftyBeaver
+
+SPEC CHECKSUMS:
+  PKCHelper: e09f4f5bf2cc3b77dec1e4d4d9cd6e5e6b79ebaf
+  SwiftyBeaver: 4cc0080d2e23f980652e28978db11a5c9da39165
+
+PODFILE CHECKSUM: fa3727bd520230053c84fb6a21cfc8dc3d5d79ca
+
+COCOAPODS: 1.7.5

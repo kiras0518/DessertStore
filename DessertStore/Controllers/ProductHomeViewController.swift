@@ -8,37 +8,44 @@
 
 import UIKit
 
-class ProductViewController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
+class ProductHomeViewController: UICollectionViewController {
     
-    private let productViewCellId = "ProductViewControllerCell"
+    lazy var dataSource = ProductHomeDataSource()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        collectionView.backgroundColor = .white
-        
-        collectionView.register(UICollectionViewCell.self, forCellWithReuseIdentifier: productViewCellId)
-        
+        setupNav()
+        setupCollectionView()
     }
     
-    override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 18
+    fileprivate func setupNav() {
+        self.navigationController?.navigationBar.tintColor = .red
     }
-
-
-    override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: productViewCellId, for: indexPath)
-
-        cell.backgroundColor = .orange
-        return cell
+    
+    fileprivate func setupCollectionView() {
+        
+        collectionView.register(ProductHomeCell.self, forCellWithReuseIdentifier: ProductHomeCell.identifier)
+        
+        collectionView.dataSource = self.dataSource
+        collectionView.delegate = self
+        
+        collectionView.contentInset = UIEdgeInsets.init(top: 20, left: 20, bottom: 20, right: 20)
+        
+        collectionView.alwaysBounceVertical = true
+        
+        collectionView.contentInsetAdjustmentBehavior = .never
+        collectionView.backgroundColor = .white
+        
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        print("INDEX:\(indexPath.item)")
+        <#code#>
     }
     
+}
 
+extension ProductHomeViewController: UICollectionViewDelegateFlowLayout {
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
         return CGSize.init(width: 154, height: 160)

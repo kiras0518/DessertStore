@@ -7,15 +7,34 @@
 //
 
 import UIKit
+import PKCHelper
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.makeKeyAndVisible()
+        let mainTabBar = MainTabBarController()
+        window?.rootViewController = mainTabBar
+        
+        // NavigationBar
+        UINavigationBar.appearance().setBackgroundImage(UIImage(), for: UIBarPosition.any, barMetrics: UIBarMetrics.default)
+        UINavigationBar.appearance().shadowImage = UIImage()
+        UINavigationBar.appearance().backgroundColor = UIColor.clear
+        UINavigationBar.appearance().tintColor = UIColor.clear
+        UINavigationBar.appearance().barTintColor = .clear
+        UINavigationBar.appearance().isTranslucent = false
+        UINavigationBar.appearance().clipsToBounds = false
+        UINavigationBar.appearance().barStyle = .blackOpaque
+        
+        //tabBar
+        UITabBar.appearance().isTranslucent = false
+        UITabBar.appearance().shadowImage = UIImage()
+        
         return true
     }
 

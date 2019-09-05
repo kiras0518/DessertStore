@@ -14,10 +14,13 @@ class ProductDetailViewController: UICollectionViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.view.backgroundColor = .white
+       
         setupCollectionView()
-        setupCollectionViewLayout()
-        
+        //setupCollectionViewLayout()
+    }
+    
+    fileprivate func setupNav() {
+        self.navigationController?.navigationBar.tintColor = .black
     }
     
     fileprivate func setupCollectionView() {
@@ -29,20 +32,18 @@ class ProductDetailViewController: UICollectionViewController {
         collectionView.dataSource = self.dataSource
         collectionView.delegate = self
         
-        collectionView.contentInsetAdjustmentBehavior = .never
-        //collectionView.backgroundColor = .black
+        collectionView.contentInset = UIEdgeInsets.init(top: 8, left: 0, bottom: 8, right: 0)
         
-    }
-    
-    fileprivate func setupCollectionViewLayout() {
-        if let layout = collectionViewLayout as? UICollectionViewFlowLayout {
-            layout.sectionInset = .init(top: 16, left: 16, bottom: 16, right: 16)
-            //layout.minimumLineSpacing = 40
-        }
+        collectionView.alwaysBounceVertical = true
+        
+        collectionView.contentInsetAdjustmentBehavior = .never
+        collectionView.backgroundColor = .yellow
+        
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print("INDEX:\(indexPath.item)")
+        
     }
     
 }
@@ -51,14 +52,13 @@ extension ProductDetailViewController: UICollectionViewDelegateFlowLayout {
     
     // MARK: - Header 高度設置
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
-        let width = view.frame.width
-        return .init(width: width, height: 340)
+        
+        return .init(width: collectionView.frame.width, height: 340)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        let width = view.frame.width
-        return CGSize.init(width:( width - 20) , height: 86)
+        return CGSize.init(width: collectionView.frame.width, height: 186)
     }
     
 }

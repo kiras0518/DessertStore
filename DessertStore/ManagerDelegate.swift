@@ -1,5 +1,5 @@
 //
-//  ProductManagerDelegate.swift
+//  ManagerDelegate.swift
 //  DessertStore
 //
 //  Created by Ting on 2019/8/18.
@@ -32,4 +32,9 @@ protocol ProfileManagerDelegate {
 //    func manager(_ manager: ProfileManager, didFetch myOrder: [ProfileMyOrder])
 //    func manager(_ manager: ProfileManager, didFailWith error: Error)
 //    func didFinishDownloadImage(image: UIImage)
+}
+
+protocol CheckoutMangerDelegate {
+//    func manager(_ manager: CheckoutManager, orderId: [OrderId])
+//    func manager(_ manager: CheckoutManager, didFailWith error: Error)
 }
