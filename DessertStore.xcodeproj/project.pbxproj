@@ -26,6 +26,9 @@
 		254FE5952309B12400CBFBA0 /* ProductDetailDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254FE5942309B12400CBFBA0 /* ProductDetailDataSource.swift */; };
 		254FE5972309B25D00CBFBA0 /* ProductDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 254FE5962309B25D00CBFBA0 /* ProductDetailCell.swift */; };
 		51E5142217155BA8CEB86928 /* Pods_DessertStore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D66D9F33309947C92EC03636 /* Pods_DessertStore.framework */; };
+		6E41B1172326A7BD00C3EFDE /* CheckoutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E41B1162326A7BD00C3EFDE /* CheckoutView.swift */; };
+		6E41B1192326B0B300C3EFDE /* CheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E41B1182326B0B300C3EFDE /* CheckoutViewController.swift */; };
+		6E41B11B2326B43000C3EFDE /* DessertColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E41B11A2326B43000C3EFDE /* DessertColor.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,6 +52,9 @@
 		254FE5922309A7AC00CBFBA0 /* ProductDetailHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailHeader.swift; sourceTree = "<group>"; };
 		254FE5942309B12400CBFBA0 /* ProductDetailDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailDataSource.swift; sourceTree = "<group>"; };
 		254FE5962309B25D00CBFBA0 /* ProductDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailCell.swift; sourceTree = "<group>"; };
+		6E41B1162326A7BD00C3EFDE /* CheckoutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutView.swift; sourceTree = "<group>"; };
+		6E41B1182326B0B300C3EFDE /* CheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckoutViewController.swift; sourceTree = "<group>"; };
+		6E41B11A2326B43000C3EFDE /* DessertColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DessertColor.swift; sourceTree = "<group>"; };
 		B2FA26563490FEEB4DB50BC3 /* Pods-DessertStore.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DessertStore.release.xcconfig"; path = "Target Support Files/Pods-DessertStore/Pods-DessertStore.release.xcconfig"; sourceTree = "<group>"; };
 		D58CEFE6A855495462FEE05F /* Pods-DessertStore.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DessertStore.debug.xcconfig"; path = "Target Support Files/Pods-DessertStore/Pods-DessertStore.debug.xcconfig"; sourceTree = "<group>"; };
 		D66D9F33309947C92EC03636 /* Pods_DessertStore.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DessertStore.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -99,6 +105,7 @@
 				254FE59A230AAA7D00CBFBA0 /* DataSources */,
 				254FE599230AAA6600CBFBA0 /* Views */,
 				254FE5842309508200CBFBA0 /* ManagerDelegate.swift */,
+				6E41B11A2326B43000C3EFDE /* DessertColor.swift */,
 				254FE5772309498100CBFBA0 /* Assets.xcassets */,
 				254FE5792309498100CBFBA0 /* LaunchScreen.storyboard */,
 				254FE57C2309498100CBFBA0 /* Info.plist */,
@@ -111,6 +118,7 @@
 			children = (
 				254FE58E230996B400CBFBA0 /* ProductHomeViewController.swift */,
 				254FE5902309A6CE00CBFBA0 /* ProductDetailViewController.swift */,
+				6E41B1182326B0B300C3EFDE /* CheckoutViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -121,6 +129,7 @@
 				254FE5922309A7AC00CBFBA0 /* ProductDetailHeader.swift */,
 				254FE5962309B25D00CBFBA0 /* ProductDetailCell.swift */,
 				251395BD230C048600253A19 /* ProductHomeCell.swift */,
+				6E41B1162326A7BD00C3EFDE /* CheckoutView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -277,9 +286,12 @@
 				254FE58F230996B400CBFBA0 /* ProductHomeViewController.swift in Sources */,
 				254FE5912309A6CE00CBFBA0 /* ProductDetailViewController.swift in Sources */,
 				254FE5972309B25D00CBFBA0 /* ProductDetailCell.swift in Sources */,
+				6E41B1192326B0B300C3EFDE /* CheckoutViewController.swift in Sources */,
 				251395BC230C041700253A19 /* ProductHomeDataSource.swift in Sources */,
 				254FE58323094C7500CBFBA0 /* ProductModel.swift in Sources */,
 				254FE5892309752D00CBFBA0 /* HomeViewCell.swift in Sources */,
+				6E41B1172326A7BD00C3EFDE /* CheckoutView.swift in Sources */,
+				6E41B11B2326B43000C3EFDE /* DessertColor.swift in Sources */,
 				251395BE230C048600253A19 /* ProductHomeCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

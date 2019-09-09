@@ -39,7 +39,9 @@ class ProductHomeViewController: UICollectionViewController {
     }
     
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        <#code#>
+        
+        //self.collectionView(_, layout: UICollectionViewLayout, sizeForItemAt: indexPath)
+       
     }
     
 }

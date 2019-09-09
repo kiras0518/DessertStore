@@ -59,6 +59,8 @@ class MainTabBarController: UITabBarController {
         let profileVC = ProductDetailViewController(collectionViewLayout: UICollectionViewFlowLayout())
         let navProfileController = UINavigationController(rootViewController: profileVC)
         
+        let profileVC1 = CheckoutViewController(nibName: "Check", bundle: nil)
+        let navProfileController1 = UINavigationController(rootViewController: profileVC1)
         //navProfileController.navigationBar.prefersLargeTitles = true
         
         //profileVC.navigationItem.title = "個人"
@@ -78,7 +80,7 @@ class MainTabBarController: UITabBarController {
 //        tabBar.unselectedItemTintColor = .buttonoff
         
         viewControllers = [navHomeController,
-                           navProfileController]
+                           navProfileController1]
         
         // modify tab bar item insets
         
