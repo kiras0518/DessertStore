@@ -10,12 +10,6 @@ import UIKit
 
 class CheckoutView: UIView {
     
-    static let identifier = "CheckoutViewId"
-    
-    var reuseIdentifier: String? {
-        return CheckoutView.identifier
-    }
-    
     lazy var foodImageView: UIView = {
         let iv = UIView()
         iv.contentMode = .scaleAspectFill

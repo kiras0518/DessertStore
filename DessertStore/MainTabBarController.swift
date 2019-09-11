@@ -80,7 +80,7 @@ class MainTabBarController: UITabBarController {
 //        tabBar.unselectedItemTintColor = .buttonoff
         
         viewControllers = [navHomeController,
-                           navProfileController1]
+                           navProfileController]
         
         // modify tab bar item insets
         

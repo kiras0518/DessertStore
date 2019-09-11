@@ -12,10 +12,11 @@ class CheckoutViewController: UIViewController {
     
     lazy var checkoutView = CheckoutView()
     
-    lazy var contentView = UIView()
+    lazy var containerView = UIView()
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupNav()
         setupSubView()
     }
     
@@ -24,7 +25,10 @@ class CheckoutViewController: UIViewController {
     }
     
     fileprivate func setupSubView() {
-          view.addSubview(checkoutView)
+        //          view.addSubview(checkoutView)
+        //        checkoutView.anchor(top: view.topAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
+        view.addSubview(containerView)
+        containerView.anchor(top: view.bottomAnchor, leading: view.leadingAnchor, bottom: view.bottomAnchor, trailing: view.trailingAnchor)
     }
     
 }
