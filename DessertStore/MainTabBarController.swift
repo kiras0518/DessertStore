@@ -32,13 +32,6 @@ class MainTabBarController: UITabBarController {
     }
     
     func setupBackgroundImage() {
-        
-//        let view = GradientView(frame: self.tabBar.frame)
-//        view.topColor = UIColor.white
-//        view.bottomColor = UIColor.white
-//        view.vertical = true
-//        let image = UIImage.createPictureFromView(view: view)
-//        self.tabBar.backgroundImage = image
     }
     
     fileprivate func setupViewController() {
@@ -48,7 +41,7 @@ class MainTabBarController: UITabBarController {
         
         //navHomeController.navigationBar.prefersLargeTitles = true
         
-        //homeVC.navigationItem.title = "商店"
+        homeVC.navigationItem.title = "商店"
         
         homeVC.view.backgroundColor = .red
         
@@ -56,31 +49,33 @@ class MainTabBarController: UITabBarController {
         
         navHomeController.tabBarItem.image = #imageLiteral(resourceName: "icon-store")
         
-        let profileVC = ProductDetailViewController(collectionViewLayout: UICollectionViewFlowLayout())
+//        let profileVC = ProductDetailViewController(collectionViewLayout: UICollectionViewFlowLayout())
+//        let navProfileController = UINavigationController(rootViewController: profileVC)
+        
+        ///
+        let profileVC = ProfileContainerController(nibName: nil, bundle: nil)
         let navProfileController = UINavigationController(rootViewController: profileVC)
         
-        let profileVC1 = CheckoutViewController(nibName: "Check", bundle: nil)
-        let navProfileController1 = UINavigationController(rootViewController: profileVC1)
-        //navProfileController.navigationBar.prefersLargeTitles = true
-        
-        //profileVC.navigationItem.title = "個人"
-        
-        profileVC.view.backgroundColor = .red
+        profileVC.navigationItem.title = "個人"
         
         navProfileController.tabBarItem.title = "Profile"
         
         navProfileController.tabBarItem.image = #imageLiteral(resourceName: "icon-store")
         
-//
-//        // aboutMe
-//        let aboutMe = AboutMeContainerController()
-//        let navAboutMe = templateNavController(image: #imageLiteral(resourceName: "bottomOffBtnOffAccount"), rootViewController: aboutMe, selectImage: #imageLiteral(resourceName: "bottomOnBtnOnAccount"))
+        ///
+        let cellVC = OrderContainerController(collectionViewLayout: UICollectionViewFlowLayout())
+        let cellController = UINavigationController(rootViewController: cellVC)
         
-//        tabBar.tintColor = UIColor.reddishOrange
-//        tabBar.unselectedItemTintColor = .buttonoff
+        cellVC.navigationItem.title = "這是訂單的CELL"
+        
+        cellVC.view.backgroundColor = .red
+        
+        cellController.tabBarItem.title = "訂單"
+        
+        cellController.tabBarItem.image = #imageLiteral(resourceName: "icon-check-selected")
         
         viewControllers = [navHomeController,
-                           navProfileController]
+                           navProfileController, cellController]
         
         // modify tab bar item insets
         
@@ -91,20 +86,5 @@ class MainTabBarController: UITabBarController {
 //        }
         
     }
-    
-//    fileprivate func templateNavController(image: UIImage?, rootViewController: UIViewController = UIViewController(), selectImage: UIImage? = nil) -> ScrollingNavigationController {
-//
-//        let viewNavController = ScrollingNavigationController(rootViewController: rootViewController)
-//
-//        if let image = image {
-//            viewNavController.tabBarItem.image = image
-//        }
-//
-//        if let selectImage = selectImage {
-//            viewNavController.tabBarItem.selectedImage = selectImage
-//        }
-//
-//        return viewNavController
-//    }
     
 }

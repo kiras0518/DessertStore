@@ -41,7 +41,7 @@ class ProductHomeViewController: UICollectionViewController {
     override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
         //self.collectionView(_, layout: UICollectionViewLayout, sizeForItemAt: indexPath)
-       
+       //self.navigationController?.pushViewController()
     }
     
 }
